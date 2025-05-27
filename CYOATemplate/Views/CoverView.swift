@@ -16,32 +16,39 @@ struct CoverView: View {
     
     // MARK: Computed properties
     var body: some View {
-        VStack {
+        
+        ZStack {
+            // adding gradient
+            LinearGradient(gradient: Gradient(colors: [.white, .blue]), startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
             
-            if book.isNotReadyToRead {
+            VStack {
                 
-                ProgressView()
-                
-            } else {
-                
-                // Show the cover
-                Text("CHASE")
-                    .font(.largeTitle)
-                
-                Button {
-                    // Animate page changes (fade)
-                    withAnimation {
-                        book.beginReading()
+                if book.isNotReadyToRead {
+                    
+                    ProgressView()
+                    
+                } else {
+                    
+                    // Show the cover
+                    Text("CHASE")
+                        .font(.largeTitle)
+                    
+                    Button {
+                        // Animate page changes (fade)
+                        withAnimation {
+                            book.beginReading()
+                        }
+                    } label: {
+                        Text("Begin reading")
                     }
-                } label: {
-                    Text("Begin reading")
+                    .buttonStyle(.borderedProminent)
                 }
-                .buttonStyle(.borderedProminent)
+                
             }
             
+            .padding()
         }
-        .padding()
-        
     }
 }
 
