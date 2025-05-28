@@ -17,15 +17,15 @@ struct DirectedGraphBuilder {
 
         // Attempt to open the database
         // TODO: 1 - Replace details of this instance of StoryInformation with data for your own group's story
-        let storyInfo = StoryInformation(title: "Journey Under The Sea",
-                                         authorOrAuthors: "R.A. Montgomery",
-                                         seriesInfo: "CHOOSE YOUR OWN ADVENTURE #2",
-                                         publisherInfo: "Chooseco LLC, Waitsfield, Vermont, 2006")
+        let storyInfo = StoryInformation(title: "CHASE",
+                                         authorOrAuthors: "Hansen, Matthew, and Ben",
+                                         seriesInfo: "CHOOSE YOUR OWN MAY24 ADVENTURE #7",
+                                         publisherInfo: "HMBco LLC, Lakefield, Ontario, 2025")
         
         // TODO: 2 - Replace details of this instance of SupabaseClient with settings for your group's database
         let supabase = SupabaseClient(
-          supabaseURL: URL(string: "https://mrdjbpjpvgtqxznsgtee.supabase.co")!,
-          supabaseKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1yZGpicGpwdmd0cXh6bnNndGVlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTczMzIyMzgsImV4cCI6MjAzMjkwODIzOH0.kLM3U980_U3qjFvw-5kvUERqSsIiB_-HTHa2FlhM5wU"
+          supabaseURL: URL(string: "https://ymsvqpieqfwlijxsqmmi.supabase.co")!,
+          supabaseKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inltc3ZxcGllcWZ3bGlqeHNxbW1pIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc5MTc3ODgsImV4cCI6MjA2MzQ5Mzc4OH0.9Vz0Ghoav6HWxoHd0tXy2WmgG3MWfqM8zyL7Yv124RM"
         )
 
         print("About to read page and edge data from database...", terminator: "")
